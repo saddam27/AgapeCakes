@@ -1,0 +1,29 @@
+
+
+  <div class="card filter">
+
+              <div *ngIf="cartItems.length === 0" class="alert alert-info"  style="font-size:20px;color:black">
+                Oop's.Its Empty..!!
+            </div>
+           
+   
+  <ul *ngIf="cartItems.length > 0" class="list-group">
+  <li class="list-group-item" *ngFor="let item of cartItems">
+    
+      <app-cart-item [cartItem]="item"></app-cart-item>
+    </li>
+  
+  
+    <li class="list-group-item">
+      <strong>Total</strong> {{ cartTotal | currency:'INR' }}
+    </li>
+  </ul>
+  <div>
+    <a class=" btn btn-outline-warning fa fa-shopping-cart"style="font-size:20px;color:black" routerLink="/shopping-cart" >Continue Shopping</a>
+    <a class=" btn btn-outline-warning "style="font-size:20px;color:black" routerLink="/Check" >Checkout</a>
+   </div>
+  </div>
+ 
+ 
+  
+
