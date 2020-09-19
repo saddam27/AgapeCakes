@@ -19,6 +19,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
 import { PaymentComponent } from './payment/payment.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AddComponent } from './components/dashboard/add/add.component';
+
+import { DeleteComponent } from './components/dashboard/delete/delete.component';
+import { AdminloginComponent } from './components/adminlogin/adminlogin.component';
 
 
 @NgModule({
@@ -37,6 +42,12 @@ import { PaymentComponent } from './payment/payment.component';
     CheckoutComponent,
     ThankyouComponent,
     PaymentComponent,
+    DashboardComponent,
+    AddComponent,
+    
+    DeleteComponent,
+    
+    AdminloginComponent,
    
   
   

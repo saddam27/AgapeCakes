@@ -25,7 +25,7 @@ function passwordMatchValidator(form) {
 export class UserregComponent implements OnInit {
   registerForm: FormGroup
 
-  constructor(private apiservice: UserService, private router: Router) { }
+  constructor(private userservice: UserService, private router: Router) { }
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
@@ -44,11 +44,11 @@ export class UserregComponent implements OnInit {
 
   register() {
     console.log(this.registerForm.value)
-    this.apiservice.createUser(this.registerForm.value).subscribe
-      (data => {
-        alert("data saved successfully")
-        this.router.navigate(['/login-page']);
-      })
+    this.userservice.saveData(this.registerForm.value).subscribe((res)=>{
+      console.log("data added",res)
+      alert("user Registerd sucessfully")
+      this.router.navigateByUrl("/login-page")
+    })
 
   }
 

@@ -9,6 +9,11 @@ import { CartItemComponent } from './components/cart/cart-item/cart-item.compone
 import { CheckoutComponent } from '../app/checkout/checkout.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
 import { PaymentComponent } from './payment/payment.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AddComponent } from './components/dashboard/add/add.component';
+
+import { DeleteComponent } from './components/dashboard/delete/delete.component';
+import { AdminloginComponent } from './components/adminlogin/adminlogin.component';
 
 
 const routes: Routes = [
@@ -50,7 +55,25 @@ const routes: Routes = [
   {
     path:'pay',
     component:PaymentComponent
-  }
+  },
+  {
+    path:'dash',
+    component:DashboardComponent
+  },
+  {
+    path:'add',
+    component:AddComponent
+  },
+  
+  {
+    path:'delete',
+    component:DeleteComponent
+  },
+  {
+    path:'adminlogin',
+    component:AdminloginComponent
+  },
+
 
   
 ]

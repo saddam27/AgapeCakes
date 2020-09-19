@@ -10,8 +10,9 @@ export class UserService {
   constructor( private http : HttpClient) { }
   saveData(data)
   {
-    return this.http.post(api + 'adduser.php',data);
+    return this.http.post(api + 'addProduct.php',data);
   }
-
+ 
+  
 }
 
